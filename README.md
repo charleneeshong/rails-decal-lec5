@@ -1,24 +1,29 @@
-# README
+# Rails Decal Lecture 5
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Files Created/Modified
 
-Things you may want to cover:
+```
+# Models
+app/models/trainer.rb
+app/models/pokemon.rb
 
-* Ruby version
+# Migrations
+db/migrate/20180309031505_create_pokemons.rb
+db/migrate/20180309031518_create_trainers.rb
+db/migrate/20180309031608_add_trainer_id_to_pokemons.rb
 
-* System dependencies
+# Schema
+db/schema.rb
 
-* Configuration
+```
 
-* Database creation
+### Rails Terminal Commands
 
-* Database initialization
+```
+rails generate model Pokemon name:string attack:integer
+rails g model Trainer name:string age:integer
 
-* How to run the test suite
+rails g migration AddTrainerIdToPokemons trainer_id:integer
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails db:migrate
+```
